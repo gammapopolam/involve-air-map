@@ -49,12 +49,12 @@ let countries = new deck.GeoJsonLayer({
     highlightColor: [61, 61, 61],
     onHover: info => {
       if (info.object) {
-        const countryInfo = info.object.properties.CYR_Report;
-        console.log(`Hovered Country CYR_Report: ${countryInfo}`);
-        document.getElementById('counter').innerText = 
-          `${ Math.round(countryInfo * 100) / 100}`; 
+        const countryInfo = info.object.properties.cat;
+        console.log(`cat: ${countryInfo}`);
+        document.getElementById('cat').innerText = 
+          `${countryInfo}`; 
       } else {
-        document.getElementById('counter').innerText = '';
+        document.getElementById('cat').innerText = '';
       }
     }
   });
