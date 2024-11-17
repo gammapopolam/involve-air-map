@@ -52,7 +52,7 @@ let countries = new deck.GeoJsonLayer({
         const countryInfo = info.object.properties.cat;
         console.log(`cat: ${countryInfo}`);
         document.getElementById('cat').innerText = 
-          `${countryInfo}`; 
+          countryInfo; 
       } else {
         document.getElementById('cat').innerText = '';
       }
