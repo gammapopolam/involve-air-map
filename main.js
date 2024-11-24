@@ -49,7 +49,7 @@ let countries = new deck.GeoJsonLayer({
     highlightColor: [61, 61, 61],
     onHover: info => {
       if (info.object) {
-        const countryInfo = info.object.properties.cat;
+        const countryInfo = info.object.properties.NAME + " - " + info.object.properties.cat;
         console.log(`cat: ${countryInfo}`);
         document.getElementById('cat').innerText = 
           countryInfo; 
